@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS/JQ practice</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <h1 id="heading" >Hello, World!</h1>
+    <button onclick="alert('Hello')">Click me.</button><br><br>
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+    <br><br>
+    <div style="border: 1px solid black;">
+        <p>Additon</p>
+        <p id="demo"></p>
+    </div>
+    <br><br>
+    <div style="border: 1px solid teal;">
+        <p>calculating celcius</p>
+        <p id="demo2"></p>
+    </div>
+    <br><br>
+    <button onclick="window.print()">Print this page</button> <br> <br>
+    <button id="change" onclick="changeColor()">Change color</button> <br>
+
+    <button id="demo" onclick="myFunction()">Click me to change the text below</button> <br> 
+    <p id="demo3">Hello</p>
+
+    <br>
+    <div>
+        <label>Change Webpage Background To:</label>
+        <button type="button" onclick="changeBodyBg('yellow');">Yellow</button>
+        <button type="button" onclick="changeBodyBg('lime');">Lime</button>
+        <button type="button" onclick="changeBodyBg('orange');">Orange</button>
+    </div>
+
+    <div>
+        <label>Change Heading Background To:</label>
+        <button type="button" onclick="changeHeadingBg('red');">Red</button>
+        <button type="button" onclick="changeHeadingBg('green');">Green</button>
+        <button type="button" onclick="changeHeadingBg('blue');">Blue</button>
+    </div>
+    <br><br>
+    <button id="btn" type="button" onclick="changeButtonBg('green');">click to change button bg color</button> <br>
+
+
+    <button id="btn1" class="btn-primary">Alert</button> <br><br>
+    <h2>Click the buttons below to check different functionalities</h2>
+    <button id="hide" class="btn-primary">hide</button>
+    <button id="show" class="btn-primary">show</button>
+    <button id="toggle" class="btn-primary">toggle</button>
+    <button id="fadeout" class="btn-primary">FadeOut</button>
+    <button id="fadein" class="btn-primary">FadeIn</button>
+    <button id="fadetoggle" class="btn-primary">FadeToggle</button>
+    <h3>Lorem ipsum dolor sit amet.</h3> 
+
+<!-- jq ui start -->
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-12">
+                <div id="draggable" class="ui-widget-content">
+                    <p>Drag me around</p>
+                  </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div id="accordion">
+                    <h3>Section 1</h3>
+                    <div>
+                      <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                      <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                      <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+                      <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                      </ul>
+                    </div>
+                    <h3>Section 4</h3>
+                    <div>
+                      <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ui-widget">
+                    <form action="">
+                        <label for="colors">colors: </label>
+                        <input id="colors" type="text">
+                    </form>
+                    
+                  </div>
+            </div>
+            <div class="col-lg-12">
+                <button class="btn-primary my-5"><a class="anchor" href="index2.html" target="blank">MORE jq ui</a></button>
+            </div>
+            <div class="col-lg-6">
+                <div id="resizable" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Resizable</h3>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <ol id="selectable">
+                    <li class="ui-widget-content">Item 1</li>
+                    <li class="ui-widget-content">Item 2</li>
+                    <li class="ui-widget-content">Item 3</li>
+                    <li class="ui-widget-content">Item 4</li>                   
+                  </ol>
+            </div>
+            <div class="col-lg-6">
+                <p>Date: <input type="text" id="datepicker"></p>
+            </div>
+            <div class="col-lg-6">
+                <div id="dialog" title="Basic dialog">
+                    <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>
+                  </div>
+                   
+                  <button id="opener">Open Dialog</button>
+            </div>
+            <div class="col-lg-12">
+                <div class="toggler">
+                    <div id="effect" class="ui-widget-content ui-corner-all">
+                      <h3 class="ui-widget-header ui-corner-all">Show</h3>
+                      <p>
+                        Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+                      </p>
+                    </div>
+                  </div>
+                   
+                  <select name="effects" id="effectTypes">
+                    <option value="blind">Blind</option>
+                    <option value="bounce">Bounce</option>
+                    <option value="clip">Clip</option>
+                    <option value="drop">Drop</option>
+                    <option value="explode">Explode</option>
+                    <option value="fade">Fade</option>
+                    <option value="fold">Fold</option>
+                    <option value="highlight">Highlight</option>
+                    <option value="puff">Puff</option>
+                    <option value="pulsate">Pulsate</option>
+                    <option value="scale">Scale</option>
+                    <option value="shake">Shake</option>
+                    <option value="size">Size</option>
+                    <option value="slide">Slide</option>
+                  </select>
+                   
+                  <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+            </div>
+            <div class="col-lg-6">
+                <div class="widget">
+                    <h1>Checkbox and radio button widgets</h1>
+                   
+                    <h2>Radio Group</h2>
+                    <fieldset>
+                      <legend>Select a Location: </legend>
+                      <label for="radio-1">New York</label>
+                      <input type="radio" name="radio-1" id="radio-1">
+                      <label for="radio-2">Paris</label>
+                      <input type="radio" name="radio-1" id="radio-2">
+                      <label for="radio-3">London</label>
+                      <input type="radio" name="radio-1" id="radio-3">
+                    </fieldset>
+                   
+                    <h2>Checkbox</h2>
+                    <fieldset>
+                      <legend>Hotel Ratings: </legend>
+                      <label for="checkbox-1">2 Star</label>
+                      <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                      <label for="checkbox-2">3 Star</label>
+                      <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                      <label for="checkbox-3">4 Star</label>
+                      <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                      <label for="checkbox-4">5 Star</label>
+                      <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                    </fieldset>
+                   
+                    <h2>Checkbox nested in label</h2>
+                    <fieldset>
+                      <legend>Bed Type: </legend>
+                      <label for="checkbox-nested-1">2 Double
+                        <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+                      </label>
+                      <label for="checkbox-nested-2">2 Queen
+                        <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+                      </label>
+                      <label for="checkbox-nested-3">1 Queen
+                        <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+                      </label>
+                      <label for="checkbox-nested-4">1 King
+                        <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+                      </label>
+                    </fieldset>
+                  </div>
+            </div>
+            <div class="col-lg-12">
+             
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+
+    <!-- js links -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
